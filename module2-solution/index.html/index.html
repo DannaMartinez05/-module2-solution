@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Design Example</title>
+
+</head>
+<body>
+    <style>
+        body {
+          margin: 0;
+          font-family: Arial, sans-serif;
+        }
+        section {
+          border: 1px solid black;
+          margin-bottom: 20px;
+        }
+        .title-region {
+          padding: 5px;
+          font-weight: bold;
+          text-align: center; /* Añadido para centrar el texto */
+        }
+        /* Estilos para las secciones específicas */
+        .chicken-section .title-region {
+          background-color: rgb(219, 158, 168);
+          color: black; /* Cambiado para mejorar la legibilidad */
+        }
+        .beef-section .title-region {
+          background-color: rgb(180, 69, 69);
+          color: white; /* Cambiado para mejorar la legibilidad */
+        }
+        .sushi-section .title-region {
+          background-color: #e0b956; /* Amarillo quemado */
+          color: black; /* Cambiado para mejorar la legibilidad */
+        }
+        .desktop-layout {
+          display: flex;
+          justify-content: space-between;
+        }
+        .tablet-layout {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .tablet-layout > div {
+          width: 50%;
+        }
+        /* Establecer el fondo de los párrafos en gris */
+        section p {
+          background-color: #ccc;
+          padding: 50px; /* Añadido para espacio entre párrafos y bordes de sección */
+        }
+        @media only screen and (max-width: 991px) {
+          .desktop-layout {
+            flex-direction: column;
+          }
+          .tablet-layout > div {
+            width: 100%;
+          }
+        }
+        @media only screen and (max-width: 767px) {
+          .desktop-layout,
+          .tablet-layout {
+            display: block;
+          }
+        }
+      </style>
+
+<header>
+  <h1>Our Menu</h1> 
+</header>
+
+<main>
+  <section class="chicken-section">
+    <div class="title-region">Chicken</div>
+    <p>lorem ipsum dolor sit amet, consectetur
+        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </section>
+  <section class="beef-section">
+    <div class="title-region">Beef</div>
+    <p>lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </section>
+  <section class="sushi-section">
+    <div class="title-region">Sushi</div>
+    <p>lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et  
+        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </section>
+</main>
+
+</body>
+</html>
